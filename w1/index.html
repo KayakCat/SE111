@@ -3,17 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W1 | Bio</title>
+    <meta name="author" content="Latoya Hall">
+    <meta name="description" content="W2D2 BIO Assignment">
+
+    <title>W1 | Latoya's Bio</title>
+    <!--in-document styling; loads in head so styles apply as content loads-->
+
+    <style>
+        /*in here we must write in CSS*/
+        /*SELECTING in CSS & Javascript: select specific element(s) on a page
+                *by ELEMENT type    ex: body, div, p
+                *by ID attribute    ex:#wrapper, #nav, #footer, #title
+                *by CLASS attribute ex: will learn in week three
+
+        */
+        div {/*applies to ALL divs in the page*/
+
+            border:1px solid black; 
+            padding:10px; /*adds 10px of space to all 4 sides in between content & border*/
+            margin:5px;/*adds 5px of space between elements (space added outside of border)*/}
+
+        #wrapper {/*# specifid ID name, only applies to single element with that ID*/background-color: white;}
+
+        #nav{
+            background-color: aquamarine;
+        }
+        #footer {/*can proved list or collection of elements to select*/
+            background-color: rgb(200,200,200);}
+
+        a {/*styles all a (link) tags in page*/ text-decoration: none; /*removes the underline font_size:20px; margin-right:25 px of space to the right OF EACH link*/}
+
+        /*4 default states --> :link, :hover, :active, :visited*/ a:hover {color:teal;}
+
+        footer { font-size:10px; text-align:center;}
+    </style>
+
 </head>
-<body>
+<body style="background-color:grey;">
     <!--your week 1 assignment goes here-->
 
-    <!--div-->
+    <div id="wrapper"><!--this div holds and "wraps around/together" all content on the page-->
 
-        <!--h1 w name--> <!--/h1-->
+        <h1 id="header">Latoya Hall</h1>
 
-        <!--p with bio about you 5-7sentences; make sure to use <b></b>, <i></i>, and <u></u>-->
+        <!--NAVIGATION-->
 
+        <div id="nav">
+            <!--ID names can only be used 1x per page-->
+            <!--linking to EXTERNAL pages [not part of website] you need the FULL PATH-->
+            <a href="https://neit.edu/" target="_blank">VISIT NEIT</a>
+            <!--href holds the URL of the website linking to-->
+            <!--target="blank" opens link in a new tab in browser-->
+
+            <!--INTERNAL LINKS: links to pages within the root folder; additional html pages within the site-->
+            <a href="page2.html">Page 2</a>
+
+            <!--IN-PAGE jump links: linking to sections within the same page (jumping from one section to another)-->
+            <a href="#bio">BIO</a>
+            <a href="#education"> EDUCATION</a>
+            <a href="#hobbies"></a>
+            <a href="#footer"> FOOTER</a>
+
+        </div><!--/ #nav-end-->
+
+        <hr>
+
+        <!--BIO SECTION-->
+        <div id="bio">
+            <h2> About Me </h2>
+
+            <p> Hello! My name is Latoya. I am studying <i>Software Engineering</i> at <u>New England Institute of Technology</u>. I think nature is the best place to be. I have spent my career thus far as a chef. I would say that I believe life is a journey, but I know it is. I make sure to spend my time making the journey fun and worth it! <b><u>Cheers!</u></b> </p> 
+         <br>
+         <br>
+
+         <p> Hello! My name is Latoya. I am studying <i>Software Engineering</i> at <u>New England Institute of Technology</u>. I think nature is the best place to be. I have spent my career thus far as a chef. I would say that I believe life is a journey, but I know it is. I make sure to spend my time making the journey fun and worth it! <b><u>Cheers!</u></b></p> 
+
+        
+
+         <!--RELATIVE IMAGE LINKS: these are images that are found within our root folder-->
+         <img src="W2D2/images/stormsEnd.jpg" alt="An illustration of Storm's End castle in spring" style="width:500px">
+          
+
+        </div><!--bio-end-->
+
+        <hr>
+        
+
+        <!--EDUCATION SECTION-->
+        <div id="education">
+            <h2>EDUCATION</h2>
+
+            <p>Hello! My name is Latoya. I am studying <i>Software Engineering</i> at <u>New England Institute of Technology</u>. I think nature is the best place to be. I have spent my career thus far as a chef. I would say that I believe life is a journey, but I know it is. I make sure to spend my time making the journey fun and worth it! <b><u>Cheers!</u></b></p>
+
+            <!--RELATIVE IMAGE LINKS: these are images that are found within our root folder-->
+         <img src="W2D2/images/meca.jpg" alt="KT's school, using as filler for now" style="width:500px">
+
+            <ol>
+
+                <li>Education 1</li>
+                <li>Education 2</li>
+                <li>Education 3</li>
+            </ol>
+
+        </div><!--education-end-->
+
+        <hr>
+
+        <!--HOBBIES SECTION-->
+        <div id="hobbies">
+            <h2>HOBBIES</h2>
+            <p>Hello! My name is Latoya. I am studying <i>Software Engineering</i> at <u>New England Institute of Technology</u>. I think nature is the best place to be. I have spent my career thus far as a chef. I would say that I believe life is a journey, but I know it is. I make sure to spend my time making the journey fun and worth it! <b><u>Cheers!</u></b></p>
+
+             <!--ABSOLUTE IMAGE PATH(REMOTE IMAGES) these images are NOT found in your root folder, so must include an "http" at the beginning of their source-->
+
+         <img src="https://assets-global.website-files.com/61549f9352f3558157a226ea/61eabcdcf266e3da4c47fc9e_Best-Places-To-Hike-In-California.jpg" alt="Hiking trail with natural stairs and tall beautiful trees in a National Park in California" style="width:500px">
+
+            <ol>
+                <li>Hiking</li>
+                <li>Tarot and Metaphysical Studies</li>
+                <li>Difficult Baking Projects</li>
+            </ol>
+
+        </div><!--hobbies-end-->
+
+        <hr>
+
+        <!--FOOTER SECTION-->
+        <div id="footer">
+            <h2>FOOTER</h2>
+
+            <a href="#header">Back to Top</a>
+            <br>
+            <p>&copy; L HALL | SE111 | Winter 2024</p>
+            <img src="W2D2/images/week2se111validation.png" alt="Validation Screenshot" style="width:100%">
+            
+        </div><!--footer-end-->
+
+    </div>
+
+        
     <!--/div-->
     
 </body>
