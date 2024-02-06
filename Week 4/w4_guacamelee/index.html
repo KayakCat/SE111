@@ -13,13 +13,19 @@
     <style> 
     /*write css in here*/
 
+    hr {  
+            height: 4px;  
+            background-color: black ;  
+            border: none;  
+        }  
+
     body{
         
         background-image: url("images/guac.png");
 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size:1500px 1500px;
+        background-repeat:repeat;
+        background-attachment:fixed;
+        background-size: 500px 500px;
         
     }
 
@@ -60,7 +66,7 @@
         text-align: center;
         line-height:50px;
 
-        background-color: rgb(221, 100, 6);
+        background-color: black;
         color:white;
 
         box-shadow: 0 0 8px black; /*adds a drop shadow*/
@@ -71,13 +77,13 @@
     .link:hover{
         background-image: url("Week 4/w4_guacamelee/images/guac-main.jpg");
         color:white;
-        background-size: 150px;
-
+        background-size: 300px 100px;
+        background-repeat: repeat;
         box-shadow: 0 0 8px white; /*adds a glow*/
     }
 
     .link:visited{
-        color:black;
+        color:#662855;
     }
 
     #header {
@@ -90,14 +96,33 @@
         font-size: 85px;
         padding:0;
         margin:0;
+        color:#76C00C;
     }
 
     h2 {
-        font-size:55px;
+        font-size:50px;
         text-align:center;
-
+        color:#76C00C;
         padding:0;
         margin:0;
+
+    }
+
+    h3{
+        text-align: center;
+        color:#76C00C;
+        font-size: 25px;
+    }
+
+    h4{
+        text-align: center;
+        color:#76C00C;
+        font-size:20px;
+    }
+
+    p{
+        color:#76C00C;
+        text-align: center
     }
 
     #footer {
@@ -125,13 +150,15 @@
     a:visited {
         color:white;
     }
-
-    #roof {
-        width:100%;
-    }
+    
 
     .special-img {
-        width: 100%;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+       
+        
     }
 
     img:hover {
@@ -156,9 +183,11 @@
         <hr>
         <!--header-->
         <div id="header">
-            <h1><em>GUACAMELEE SUPER TURBO CHAMPIONSHIP EDITION</em></h1>
+            <h1><em>GUACAMELEE!</em></h1>
+            <h3><em>SUPER TURBO CHAMPIONSHIP EDITION</em></h3>
         </div><!--end header-->
-
+        <hr>
+        <br>
         <div id="Nav">
             <div id="buttons">
                 <!--relative file paths to internal site pages-->
@@ -167,19 +196,28 @@
                 <a href="review.html" class="link">REVIEW</a>
             </div>
         </div><!--end nav-->
+        <br><br>
+
+        <img class="special-img" src="images/juan.jpg" alt="juan the luchador">
+
+        <br><br>
 
         <!--page content-->
         <div id="content">
-            <h2>About the game <em>GUACAMELEE! SUPER TURBO CHAMPIONSHIP EDITION</em></h2>
-            <p><em>GUACAMELEE! SUPER TURBO CHAMPIONSHIP EDITION</em>: Are you looking for an action packed Metroidvania-style action-platformer set in a magical world inspired by traditional Mexican culture and folklore game to play? <em>WELL</em> here it is! <em>Guacamelee!</em> features melee combat, parallel dimensions, and same-screen co-op. Get ready to be dazzled!</p> 
+            <h2>ABOUT <em>GUACAMELEE! </em></h2>
+            <h4><em>SUPER TURBO CHAMPIONSHIP EDITION</em></h4>
+            <hr>
+            <p style="font-size: 25px"><em>GUACAMELEE! SUPER TURBO CHAMPIONSHIP EDITION</em>: Are you looking for an action packed Metroidvania-style action-platformer game set in a magical world inspired by traditional Mexican culture and folklore game to play? <em>WELL</em> here it is! <em>Guacamelee!</em> features melee combat, parallel dimensions, and same-screen co-op. Get ready to be dazzled!</p> 
+
+            
 
         
 
-        </div><!--end content-->
+       
     <br><br>
-    <div><!--content-->
+        <div style="text-align: center;"><!--iframe-->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/2q1Sp_dUzqM?si=v4uYcrhhUrF08AB7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div><!--content-end-->
-    
+        </div><!--end iframe-->
+    </div>
 </body>
 </html>
