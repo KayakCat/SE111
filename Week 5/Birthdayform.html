@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="L Hall">
+    <meta name="descriptions" content="W5 - HW">
+
+    <title>Birthday Party Form</title>
+
+    <style>
+        /*styling to show the borders of the table data cells (td) and the whole table (table)*/
+        table, td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Latoya's Sweet 16 Birthday Party</h1>
+
+    <!--when working with tables and forms, put the table INSIDE of the form-->
+    <!--work row by row and have a plan before starting your code!-->
+    <form method="GET" action="">
+
+        <table>
+
+            <!--TABLE HEAD-->
+            <thead>
+                <!--COLUMN HEADERS - must use <b>/<h#> if you want them to be bold-->
+                <!--table row: one row of data, populated with <td>-->
+                <!--NEW ROW-->
+                <tr>
+                    <!--LABEL-->
+                    <!--make sure the for matches input's id and name-->
+                    <td>
+                        <h2>Labels</h2>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <h2>Form Fields</h2>
+
+                    </td>
+                </tr>
+
+            </thead>
+
+            <!--TABLE BODY-->
+            <tbody>
+                <!--New Row-->
+                <tr>
+                    <!--LABEL-->
+                    <!--make sure the for matches input's id and name-->
+                    <td>
+                        <label for="gfirst">Parent/Guardian Name:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <input type="text" name="gfirst" id="gfirst" placeholder="Parent/Guardian First Name"
+                        required>
+
+
+                    </td>
+                </tr>
+                <!--New Row-->
+                <tr>
+                    <!--LABEL-->
+                    <!--make sure the for matches input's id and name-->
+                    <td>
+                        <label for="cfirst">Child's First Name:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <input type="text" name="cfirst" id="c-first" placeholder="Child's First Name"
+                         required>
+
+
+
+                    </td>
+                </tr>
+                <!--New Row-->
+                <tr>
+                    <!--LABEL-->
+                    <!--make sure the for matches input's id and name-->
+                    <td>
+                        <label for="age">Child's Age:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <input type="number" name="age" value="3" id="age" min="0" max="120"
+                        required>
+
+
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <!--LABEL-->
+                    <!--make sure the for matches input's id and name-->
+                    <td>
+                        <h2>Date & Time</h2>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <h2></h2>
+
+                    </td>
+                </tr>
+
+                    <!--New Row-->
+                    <tr>
+                        <!--LABEL-->
+                        
+                        <td>
+                            <label for="date">Date:</label>
+    
+                        </td>
+    
+                        <!--INPUT-->
+                        <td>
+                            <input type="date" name="date" 
+                            required>
+                            
+    
+    
+    
+                        </td>
+                    </tr>
+
+                    <!--New Row-->
+                    <tr>
+                        <!--LABEL-->
+                        
+                        <td>
+                            <label for="time">Start Time:</label>
+    
+                        </td>
+    
+                        <!--INPUT-->
+                        <td>
+                            <input type="time" name="time" 
+                            required>
+                            
+    
+    
+    
+                        </td>
+                    </tr>
+
+                
+                 <!--New Row-->
+                 <tr>
+                    <!--LABEL-->
+                    <!--Drop down menu-->
+                    <td>
+                        <label for="faveColor">Pick Your<br> Favorite Color:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <!--create drop down menu first-->
+                        <select name="faveColor" id="faveColor">
+                            <!--user is restricted to selecting only one option-->
+                            <option value="r">RED</option>
+                            <option value="o">ORANGE</option>
+                            <option value="y">YELLOW</option>
+                            <option value="g">GREEN</option>
+                            <option value="b">BLUE</option>
+                            <option value="i">INDIGO</option>
+                            <option value="v">VIOLET</option>
+                        </select>
+                        
+
+
+
+                    </td>
+                </tr>
+                <!--New Row-->
+                <tr>
+                    <!--LABEL-->
+                    <!--Radio Buttons Multiple Choice-->
+                    <td>
+                        <label for="study">Program of Study:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <input type="radio" name="study" value="SE">
+                        Software Engineering<br>
+                        <input type="radio" name="study" value="CYB">
+                        Cybersecurity & Networking<br>
+                        <input type="radio" name="study" value="WD">
+                        Web Development<br>
+                        
+
+
+
+                    </td>
+                </tr>
+                 <!--New Row-->
+                 <tr>
+                    <!--LABEL-->
+                    <!--Check Box elements- user can select as many checkboxes as they'd like-->
+                    <td>
+                        <label for="vehicle">Select Your Vehicles:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <input type="checkbox" name="vehicle" value="car">
+                        Car<br>
+                        <input type="checkbox" name="vehicle" value="airplane">
+                        Airplane<br>
+                        <input type="checkbox" name="vehicle" value="camel">
+                        Camel<br>
+                        <input type="checkbox" name="vehicle" value="tricycle">
+                        Tricycle<br>
+                        <input type="checkbox" name="vehicle" value="unicycle">
+                        Unicycle<br>
+                        
+
+
+
+                    </td>
+                </tr>
+                <!--New Row-->
+                <tr>
+                    <!--LABEL-->
+                    
+                    <td>
+                        <label for="date">Date:</label>
+
+                    </td>
+
+                    <!--INPUT-->
+                    <td>
+                        <input type="date" id="date">
+                        
+
+
+
+                    </td>
+                </tr>
+                        <!--New Row-->
+                        <tr>
+                            <!--LABEL-->
+                            
+                            <td>
+
+                            </td>
+        
+                            <!--INPUT-->
+                            <td>
+                                <input type="submit" value="SUBMIT">
+                                
+        
+        
+        
+                            </td>
+                        </tr>
+        
+
+
+
+
+
+
+
+
+            </tbody>
+
+            <!--TABLE FOOT-->
+            <tfoot>
+
+            </tfoot>
+
+        </table>
+    </form>
+    
+</body>
+</html>

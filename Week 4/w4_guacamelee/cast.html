@@ -18,6 +18,60 @@
         margin-bottom: 0;
     }
 
+    h1 {
+        font-size:50px;
+        text-align:center;
+        color:#76C00C;
+        padding:0;
+        margin:0;
+
+    }
+
+    h2 {
+        font-size:35px;
+        text-align:center;
+        color:#76C00C;
+        padding:0;
+        margin:0;
+
+    }
+
+    h3{
+        text-align: center;
+        color:#76C00C;
+        font-size: 20px;
+    } 
+    
+    hr {  
+            height: 4px;  
+            background-color: black ;  
+            border: none;  
+        }  
+
+    body{
+        
+        background-image: url("images/guac.png");
+
+        background-repeat:repeat;
+        background-attachment:fixed;
+        background-size: 500px 500px;
+        
+    }
+
+    #container{
+
+        width: 980px;
+        padding:20px;/*once width is set, use 'auto' to center horizontally*/
+        margin:auto;
+        border: 2px solid black;
+        box-shadow: 0 0 8px black;
+        border-radius: 15px; /*rounds corners*/
+        background-color:rgba(33,33,33,0.95);
+        color:white;
+        
+    }
+
+
     #buttons {
 
     width: 600px;
@@ -25,6 +79,61 @@
     margin:auto;
     text-align: center;
     
+    }
+
+    .link{
+
+width:150px;
+height:50px;
+margin-left:23px;
+margin-right:23px;
+
+text-decoration:none;/*removes underline*/
+font-size:30px;
+
+float:left; /*puts buttons back in horizontal line*/
+text-align: center;
+line-height:50px;
+
+background-color: black;
+color:white;
+
+box-shadow: 0 0 8px black; /*adds a drop shadow*/
+
+border-radius:15px;
+}
+
+
+    a {
+        background-color:magenta;
+        text-decoration: none;
+        color:white;
+    }
+
+    a:hover {
+        background-color: black;
+    }
+
+    a:visited {
+        color:white;
+    }
+
+    p{
+        color:#76C00C;
+        text-align: center
+    }
+
+    .character {
+
+        text-align: center;
+        
+
+    }
+
+    body{
+        
+        background-color: blueviolet;
+        
     }
 
 
@@ -62,7 +171,7 @@
             <!--div for each character-->
             <div class="character">
                 <h3>Juan Aguacate</h3>
-                <img src="images/guacameleeJuanaguacate.jpg" alt="Juan the luchador" height="50">
+                <img src="images/guacameleeJuanaguacate.jpg" alt="Juan the luchador" height="150">
                 <p>Juan Aguacate - the main character of the game. Lupita's true love.</p>
             </div>
 
@@ -72,17 +181,17 @@
 
         <div class="character">
             <h3>Tostada</h3>
-            <img src="images/guactostada.jpg" alt="Tostada - Second Player Option" height="50">
+            <img src="images/guactostada.jpg" alt="Tostada - Second Player Option" height="150" >
             <p>Tostada - player two character. </p>
         </div>
 
-    </div><!--end container-->
+    
 
     <hr>
 
         <div class="character">
             <h3>Lupita</h3>
-            <img src="images/lupita.jpg" alt="Lupita - El Presidente's Daughter" height="50">
+            <img src="images/lupita.jpg" alt="Lupita - El Presidente's Daughter" height="150">
             <p>Lupita - El Presidente's Daughter: Kidnapped by Calaca, the bad guy of the game.</p>
         </div>
 
@@ -92,7 +201,7 @@
 
         <div class="character">
             <h3>Carlos Calaca</h3>
-            <img src="images/guaccarloscalaca.jpg" alt="The bad guy of the game" height="50">
+            <img src="images/guaccarloscalaca.jpg" alt="The bad guy of the game" height="150">
             <p>Carlos Calaca - kidnaps El Presidente's Daughter so that he can perfrom a ritual and rule the world of the living as well as the world of the dead.</p>
         </div>
 
@@ -102,7 +211,7 @@
 
         <div class="character">
             <h3>Uay Chivo</h3>
-            <img src="images/guacuaychivo.jpg" alt="Juan and Tostadas trainer" height="50">
+            <img src="images/guacuaychivo.jpg" alt="Juan and Tostadas trainer" height="150">
             <p>The Mr. Miyagi of Guacamelee. He also wants to get with Juans mother. Actually, everyone's mother.</p>
         </div>
 
@@ -112,7 +221,7 @@
 
         <div class="character">
             <h3>X'tabay</h3>
-            <img src="images/guacxtabay.jpg" alt="Calacas help" height="50">
+            <img src="images/guacxtabay.jpg" alt="Calacas help" height="150">
             <p>In love with Calaca and will do anything for him. The feeling is not mutual.</p>
         </div>
 
@@ -122,7 +231,7 @@
 
         <div class="character">
             <h3>Flame Face</h3>
-            <img src="images/guacflameface.jpg" alt="Calacas help" height="50">
+            <img src="images/guacflameface.jpg" alt="Calacas help" height="150">
             <p>One of Calacas minions. Loves shooting his gun and drinking to take the pain away of his eternal burning face.</p>
         </div>
 
@@ -144,6 +253,7 @@
 
 
         </div><!--end footer-->
+    </div><!--end container-->
 
 
 
