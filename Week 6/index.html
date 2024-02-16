@@ -3,76 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W6 - JS Intro Demo</title>
+    <title>Pay Calculator</title>
 
-    <!--in document styling-->
     <style>
-        /*write css in here*/
-        body {
-            background-color: grey;
-        }
 
+    h1 {
+        font-size: 30px;
+        padding:10px;
+        margin:0;
+        text-align: center;
+        color:purple;
+    }
+
+        
+    body{
+        
+        background-image: url("Images/moneymeme.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center bottom;
+        
+    }
     </style>
 </head>
 <body>
-    <!--we should have at least 1 html element in the page before-->
-    <h1>W6 | Intro to Javascript Demo |</h1>
+
+    
+    <h1>W6 | Latoya's Pay Calculator |</h1>
+    <hr>
 
     <!--in document Javascript-->
     <script>
-        //writing JS in here
-        //this is a comment in JS
+       
+        //INPUT-----------------------------------------------------------------------------
+        //prompt the user to give hourly rate and hours worked in a two week period. 
+        var hourly_rate = Number (prompt(`Please enter your hourly rate: `))
+        console.log(`passed the hourly rate prompt()`)
 
-        //all variables must be declared before they can be defined and used
-        //we declare a variable with the keyword: var
+        var hours = Number (prompt(`Please enter hours worked in a TWO WEEK period: `))
+        console.log(`passed the hours worked prompt()`)
+       
+        //assign variables to week and tax rate to calculate gross pay, tax amount, and net pay
+        var week = 2
+        var tax = 0.2
 
-        var name //declares only, browser understands what 'name' is when seen
-        name = "Latoya" //defining the variable; assigning a value
-
-        var name = "Latoya" //declaration & immediate assignment
-
-        var num1 = 10
-        var num2 = 7
-
-        var sum = num1 + num2
+        //assign variables to gross pay, tax amount, and net pay
+        var gross_pay = hourly_rate * hours * week
+        var tax_amount = gross_pay * tax
+        var net_pay = gross_pay - tax_amount
 
         //OUTPUT-----------------------------------------------------------------------
-        //cannot use num1 & num2 in a process until they are both declared and defined
-        console.log(`Num1: ${num1} | Num2: ${num2}  |Sum: ${sum}`) // ` != ''
-        //console.log() only used for developement/debugging
+        
+        //output is displayed in an alert to the user 
+        alert(`Your Gross Pay: $${gross_pay} \nYour Taxes Amount : $${tax_amount.toFixed(2)} \nYour Net Pay:$${net_pay}`)
 
-        //alert() can be seen/viewed by a user visiting a page
-        //create a pop-up window in the browser page; user must interact with the alert() before any further lines are read
+        //console log displays same issue as the alert, but in the console
+        console.log(`Your Gross Pay: $${gross_pay} \nYour Taxes Amount : $${tax_amount.toFixed(2)} \nYour Net Pay:$${net_pay}`)
 
-        alert(`Hi there, ${name}!`)
-
-        console.log(`passed the alert()`)
-
-        //INPUT-----------------------------------------------------------------------------
-        //prompt() prompting the user with the message; a pop-up with text field input element is displayed -user enters data into field, presses OK to continue
-        var lname = prompt(`Hi again ${name}, Please enter your last name: `)
-
-        console.log(`passed the prompt()`)
-
-        console.log(`Last: ${lname}`) //for developer debugging
-        alert(`Last: ${lname}`) //for user
-
-        //CAST PROMPT RETURNS TO ENSURE THEY ARE NUMBERS
-
-        var userNum = Number(prompt(`Enter a number: `))
-        userNum
-        console.log(userNum.toFixed(2))
-
-        var tax = userNum * 0.20
-
-        alert(`Your taxes due : $${tax.toFixed(2)}`)
-        console.log(`Your taxes due : $${tax.toFixed(2)}`)
-
-        //alert(`GROSS PAY: $${} \nTAX AMOUNT: $${} \nNET PAY: $${}`) //Week 6 HW OUTPUT - LAB 2 PYTHON 116 FOR REFERENCE
-
-
-
-
+    
     </script>
     
 </body>
