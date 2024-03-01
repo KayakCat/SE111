@@ -106,6 +106,7 @@
         //write JS in here
 
         //PART1-----selecting and storing HTML elements------------
+
         /*
             declare names for each of the following elements in the document: body, h1, input, div, input buttons
 
@@ -114,13 +115,40 @@
             console.log() all of these elements once complete
 
         */
+     
+        var body = document.querySelector(`body`);
+        var header1 = document.querySelector(`h1`);
+        var inputFirst = document.querySelector(`#first`);
+        var inputLast = document.querySelector(`#last`);
+        var inputRate = document.querySelector(`#rate`)
+        var inputHours = document.querySelector(`#hours`)
+        var divInfo = document.querySelector(`#info`);
+        var inputButton = document.querySelector(`#enter-button`);
+        var inputButton2 = document.querySelector(`#confirm-button`)
+
+
+        //console log elements        
+        console.log(body);
+        console.log(header1);
+        console.log(inputFirst);
+        console.log(inputLast);
+        console.log(inputRate);
+        console.log(inputHours);
+        console.log(divInfo);
+        console.log(inputButton);
+        console.log(inputButton2)
 
         //PART2------adding event listeners------------------------
         /*
-            add an event listener to the #enter-button that runs a function called "formData"
-
-            add an event listener to the #confirm-button that runs a function called "confirmForm"
+            add an event listener to the #enter-button that runs a function called 
+            "formData"
+             add an event listener to the #confirm-button that runs a function called "confirmForm"
         */
+
+            document.getElementById(`enter-button`).addEventListener(`click`, formData);
+            document.getElementById(`confirm-button`).addEventListener(`click`, confirmForm);
+            
+        
 
 
         //PART3------building event functions----------------------
@@ -136,34 +164,85 @@
                     HINT EX: `<p><b>Full Name:</b> ${fullName}`
 
                 REMEMBER: form text field data is treated as a STRING so you will most likely need the Number() 
-
-
-            confirmForm() instructions:
-                -store the input element values to descriptive names
-                -declare and create a "fullName" using the first and last values
-                -declare and create: grossPay, taxAmount, netPay
-                -display all information (fullName, grossPay, taxAmount, netPay) to the user using ONE alert()
-                -each value should be on its own line (use `\n`) and ensure all monetary values are displayed to the second decimal place (.toFixed(2))
-                
-
         */
-       function formData(event)
-       {
-            //EXTRA CREDIT---------+5pts-------------------------------
-            /*
-                Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
-            */
+            //store/declare/create vars
+            function formData() {
+                var firstName = document.getElementById('first').value;
+                var lastName = document.getElementById('last').value;
+                var hourlyRate = Number(document.getElementById('rate').value);
+                var hoursWorked = Number(document.getElementById('hours').value);
+                var fullName = firstName + `` +lastName;//create fullName variable using firstName and lastName
 
-       }//formData()
+                // Calculate gross pay, tax amount, and net pay
+                var grossPay = hourlyRate * hoursWorked;
+                var taxRate = 0.20; 
+                var taxAmount = grossPay * taxRate;
+                var netPay = grossPay - taxAmount;
 
+                // Log the values
+                console.log('Full Name:', fullName);
+                console.log('Gross Pay:', grossPay);
+                console.log('Tax Amount:', taxAmount);
+                console.log('Net Pay:', netPay);
 
-       function confirmData(event)
-       {
+                //display information in the info div
+                document.getElementById('info').innerHTML = `
+                    <p><b>Full Name:</b> ${firstName} ${lastName}</p>
+                    <p><b>Gross Pay:</b> $${grossPay.toFixed(2)}</p>
+                    <p><b>Tax Amount:</b> $${taxAmount.toFixed(2)}</p>
+                    <p><b>Net Pay:</b> $${netPay.toFixed(2)}</p>`;
+                    
+                var displayMessage = "Full Name: " + fullName + "\n"
+                        + "Gross Pay: $" + grossPay.toFixed(2) + "\n"
+                        + "Tax Amount: $" + taxAmount.toFixed(2) + "\n"
+                        + "Net Pay: $" + netPay.toFixed(2);
 
-       }//confirmData()
+    alert(displayMessage);
+}
+        
+            //confirmForm() instructions:
+            //store the input element values to descriptive names
+                
+            function confirmForm(){
+                var firstName = document.getElementById('first').value;
+                var lastName = document.getElementById('last').value;
+                var hourlyRate = Number(document.getElementById('rate').value);
+                var hoursWorked = Number(document.getElementById('hours').value);
+                var fullName = firstName + `` +lastName;//create fullName variable using firstName and lastName
 
+                // Calculate gross pay, tax amount, and net pay
+                var grossPay = hourlyRate * hoursWorked;
+                var taxRate = 0.20; 
+                var taxAmount = grossPay * taxRate;
+                var netPay = grossPay - taxAmount;
+
+                // Log the values
+                console.log('Full Name:', fullName);
+                console.log('Gross Pay:', grossPay);
+                console.log('Tax Amount:', taxAmount);
+                console.log('Net Pay:', netPay);
+
+             
+                    `<p><b>Full Name:</b> ${firstName} ${lastName}</p>
+                    <p><b>Gross Pay:</b> $${grossPay.toFixed(2)}</p>
+                    <p><b>Tax Amount:</b> $${taxAmount.toFixed(2)}</p>
+                    <p><b>Net Pay:</b> $${netPay.toFixed(2)}</p>`;
+                    
+                var displayMessage = "Full Name: " + fullName + "\n"
+                        + "Gross Pay: $" + grossPay.toFixed(2) + "\n"
+                        + "Tax Amount: $" + taxAmount.toFixed(2) + "\n"
+                        + "Net Pay: $" + netPay.toFixed(2);
+
+    alert(displayMessage);
+}
 
     </script>
-    
+   <div id="footer">
+        <p>&copy;Latoya Hall |SE111| 202420</p>
+
+        <!--edit src at end of work session!-->
+        <img src="images\paycalc.png" alt="validation screenshot" width="100%">
+
+    </div><!--end #footer-->  
 </body>
 </html>
