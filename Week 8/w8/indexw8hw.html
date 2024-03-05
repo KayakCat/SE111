@@ -47,6 +47,13 @@
 		var button = document.getElementById(`button`);
 		var divOutput = document.getElementById(`output`);
 
+
+		console.log('First name:', first);
+        console.log('Last Name:', last);
+        console.log('Click:', button);
+        console.log('Output:', output);
+
+
 		
 
 		//Make an array to store the people
@@ -71,19 +78,20 @@
 			_________________________
 		--------------------------------------------------------*/
 
-		function calcAndDisplay(e)
-		{
+		function calcAndDisplay(e){
 			//Create an object called person.
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: firstName.value,
-				last: lastName.value
+
+       		first: firstName.value,
+        	last: lastName.value,
+    
 
 
-            }//end of person object
+		}//end of person object
 
 
 
@@ -91,6 +99,8 @@
 			//Add the person object into the people array by using the .push() array method.
 			
 			people.push(person)
+
+
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
 			{
@@ -107,32 +117,36 @@
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
 			
-
+			console.log(people);
 			//create a variable called 'output' that has an empty string value stored to 
 			
 			var output = ``;
+
 			//Loop through the objects in the people array
 			for(let i = 0; i < people.length; i++)
             {
-
+				console.log(`Info for ${people[i].first}:`)
 				//Loop through each property in the object
 				for(key in people[i])
                 {
+					console.log(`${key}: ${people[i][key]}`)
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
 				
-
+				
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
 				
-
+				output += '<hr>';
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
+				console.log(output);
 				//replace the outputDiv's inner HTML with the output string
+				divOutput.innerHTML = output;
 				
 
 
